@@ -3,7 +3,7 @@
   display: flex;
   align-items: flex-start;
   justify-content: space-between;
-  padding: 20px 50px;
+  padding: 1.25rem 3rem;
   list-style-type: none;
   a {
     text-decoration: none;
@@ -11,21 +11,22 @@
     transition: all 0.2s ease 0s;
     font-size: 1.5rem;
     font-weight: 500;
+    img {
+      padding-left: 4rem;
+    }
   }
   a:hover {
     color: rgb(81, 81, 81);
   }
-  ul {
+  .headerLinkBox {
     display: flex;
     justify-content: flex-end;
     align-items: center;
-    li {
+    padding-top: 4rem;
+    div {
       list-style-type: none;
-      padding: 60px;
-      margin-right: 20px;
-      &:last-child {
-        margin-right: 0px;
-      }
+      padding: 4rem;
+      margin-right: 1.25rem;
     }
   }
 }
