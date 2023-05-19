@@ -1,5 +1,5 @@
 import '../styles/globals.scss';
 
-export default function Shoppingcart() {
+export default function ShoppingCartPage() {
   return <div>Shopping Cart</div>;
 }

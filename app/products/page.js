@@ -2,7 +2,7 @@ import '../styles/globals.scss';
 import Image from 'next/image';
 import styles from '../styles/products.module.scss';
 
-export default function Products() {
+export default function ProductsPage() {
   return (
     <main className={styles.productsBox}>
       <section className={styles.products}>

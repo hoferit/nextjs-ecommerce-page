@@ -1,5 +1,5 @@
 import '../../styles/globals.scss';
 
-export default function Checkout() {
+export default function CheckoutPage() {
   return <div>Checkout</div>;
 }

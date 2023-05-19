@@ -12,6 +12,11 @@ export default function Header() {
         </Link>
         <div className={styles.headerLinkBox}>
           <div className={styles.headerLinkWrap}>
+            <Link className={styles.headerLink} href="/about">
+              About
+            </Link>
+          </div>
+          <div className={styles.headerLinkWrap}>
             <Link className={styles.headerLink} href="/products">
               Products
             </Link>

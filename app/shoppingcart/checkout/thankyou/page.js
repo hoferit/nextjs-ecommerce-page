@@ -1,3 +1,3 @@
-export default function Thankyou() {
+export default function ThankYouPage() {
   <div>Thanks for Shopping!</div>;
 }
