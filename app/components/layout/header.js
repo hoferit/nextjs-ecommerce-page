@@ -17,7 +17,11 @@ export default function Header() {
             </Link>
           </div>
           <div className={styles.headerLinkWrap}>
-            <Link className={styles.headerLink} href="/products">
+            <Link
+              className={styles.headerLink}
+              href="/products"
+              data-test-id="products-link"
+            >
               Products
             </Link>
           </div>

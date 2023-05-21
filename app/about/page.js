@@ -1,6 +1,7 @@
 import '../styles/globals.scss';
+import styles from '../styles/aboutPage.module.scss';
 
-export default function aboutPage() {
+export default function AboutPage() {
   return (
     <main className={styles.main}>
       <h1>About Speedy Pals</h1>
