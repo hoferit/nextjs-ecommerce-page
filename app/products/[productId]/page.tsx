@@ -2,16 +2,16 @@ import '../../styles/globals.scss';
 import Image from 'next/image';
 import { notFound } from 'next/navigation';
 import { getProductById } from '../../../database/products';
-import Quantity from '../../components/cart/quantity';
 import styles from '../../styles/productPage.module.scss';
+import AddToCart from './addtocart';
 
 // define type of productId params prop
 type Props = {
   params: { productId: number };
 };
 
-export default function ProductPage(props: Props) {
-  const singleProduct = getProductById(Number(props.params.productId)); // calling function from database to get productId
+export default async function ProductPage(props: Props) {
+  const singleProduct = await getProductById(Number(props.params.productId)); // calling function from database to get productId
   if (!singleProduct) {
     notFound();
   }
@@ -39,7 +39,7 @@ export default function ProductPage(props: Props) {
             Price:{' '}
             <span data-test-id="product-price">{singleProduct.price}</span> €
           </p>
-          <Quantity />
+          <AddToCart />
         </div>
       </section>
     </main>

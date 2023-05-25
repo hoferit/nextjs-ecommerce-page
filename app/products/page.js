@@ -1,10 +1,11 @@
 import '../styles/globals.scss';
 import Image from 'next/image';
 import Link from 'next/link';
-import { products } from '../../database/products';
+import { getProducts } from '../../database/products';
 import styles from '../styles/productsPage.module.scss';
 
-export default function ProductsPage() {
+export default async function ProductsPage() {
+  const products = await getProducts();
   return (
     <main className={styles.main}>
       <h1>Our Products</h1>
@@ -22,6 +23,7 @@ export default function ProductsPage() {
                   data-test-id={`product-${product.id}`}
                 >
                   <Image
+                    alt={product.name}
                     src={`/images/${product.type}.jpeg`}
                     width="350"
                     height="350"

@@ -1,16 +1,18 @@
 'use client';
 
-import { useRouter } from 'next/router';
 import { useState } from 'react';
 import styles from '../../styles/addtocart.module.scss';
 import { createOrUpdateCart } from './actions';
 
-export default function Quantity(props) {
+export default function AddToCart(props) {
   const [products, setProducts] = useState(1);
-  const router = useRouter();
 
   return (
-    <div>
+    <form
+      action={async () => {
+        await createOrUpdateCart(props.productId, products);
+      }}
+    >
       <div className={styles.quantityWrap}>
         <button
           className={`${styles.quantityModifier} ${styles.left}`}
@@ -21,7 +23,6 @@ export default function Quantity(props) {
         <input
           className={styles.quantityInput}
           data-test-id="product-quantity"
-          readOnly
           value={products}
         />
         <button
@@ -31,19 +32,13 @@ export default function Quantity(props) {
           &#xff0b;
         </button>
       </div>
-      <form
-        action={async () => {
-          router.refresh();
-          await createOrUpdateCart(props.productId, products);
-        }}
+
+      <button
+        data-test-id="product-add-to-cart"
+        onClick={() => setProducts((prevCount) => prevCount + 1)}
       >
-        <button
-          data-test-id="product-add-to-cart"
-          onClick={() => setProducts((prevCount) => prevCount + 1)}
-        >
-          add to cart
-        </button>
-      </form>
-    </div>
+        add to cart
+      </button>
+    </form>
   );
 }
