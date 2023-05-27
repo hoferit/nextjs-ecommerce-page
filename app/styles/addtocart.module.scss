@@ -1,22 +1,28 @@
-.quantityWrap {
+.buttonsWrap {
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   align-items: center;
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
   border-radius: 3px;
   user-select: none;
   outline: none;
+  background-color: lavenderblush;
+
   &:focus {
     background: red;
   }
+}
+.quantityWrap {
+  margin-top: 2rem;
 }
 .quantityModifier {
   padding: 0.7rem;
   width: 3rem;
   font-size: 1.5rem;
 
-  background: #f3f3f3;
-  color: #888;
+  color: #6cddec;
+  background: hsla(10, 88%, 70%, 0.706);
   border: 0 solid #dbdbdb;
   text-align: center;
   text-shadow: 0 1px 0 rgba(#fff, 0.6);
@@ -24,8 +30,8 @@
   cursor: pointer;
 
   &:hover {
-    background: rgba(243, 243, 243, 10);
-    color: rgba(136, 136, 136, 20);
+    color: rgba(246, 133, 110, 10);
+    background: rgba(108, 221, 236, 20);
   }
 
   &.left {
@@ -41,9 +47,28 @@
   width: 4rem;
   padding: 0.7rem;
   font-size: 1.5rem;
-
+  color: hsla(10, 88%, 70%, 0.706);
   border: 0;
   border-top: 0 solid #dbdbdb;
   border-bottom: 0 solid #dbdbdb;
   text-align: center;
+}
+.cartButton {
+  border: none;
+  text-align: center;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+  padding: 0.7rem;
+  align-self: flex-end;
+  background: transparent;
+  color: hsla(10, 88%, 70%, 0.706);
+  transition: opacity 0.3s, border 0.3s;
+  &:hover {
+    color: #6cddec;
+  }
+}
+.break {
+  flex-basis: 100%;
+  height: 0;
 }

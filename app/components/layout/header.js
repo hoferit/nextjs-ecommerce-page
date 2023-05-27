@@ -27,7 +27,7 @@ export default function Header() {
           </div>
           <div className={styles.headerCartWrap}>
             <Link className={styles.headerCartLink} href="/shoppingcart">
-              Shopping Cart
+              <Image src="/carticonblue.svg" width="100" height="100" />
             </Link>
           </div>
         </div>

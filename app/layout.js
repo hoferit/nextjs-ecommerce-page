@@ -1,9 +1,9 @@
 import './styles/globals.scss';
-import { Inter } from 'next/font/google';
+import { Open_Sans } from 'next/font/google';
 import Footer from './components/layout/footer';
 import Header from './components/layout/header';
 
-const inter = Inter({ subsets: ['latin'] });
+const nunito = Open_Sans({ subsets: ['latin'] });
 
 export const metadata = {
   title: 'Speedy Pals Store',
@@ -13,7 +13,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={inter.className}>
+      <body className={nunito.className}>
         <Header />
         {children}
         <Footer />

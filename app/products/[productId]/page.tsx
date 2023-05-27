@@ -39,7 +39,7 @@ export default async function ProductPage(props: Props) {
             Price:{' '}
             <span data-test-id="product-price">{singleProduct.price}</span> €
           </p>
-          <AddToCart />
+          <AddToCart productId={singleProduct.id} />
         </div>
       </section>
     </main>

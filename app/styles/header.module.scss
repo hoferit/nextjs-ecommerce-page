@@ -4,12 +4,15 @@
   align-items: flex-start;
   justify-content: space-between;
   list-style-type: none;
+  box-shadow: 0 8px 24px 0 rgba(0, 0, 0, 0.11), 0 4px 16px 0 rgba(0, 0, 0, 0.08);
+  border-radius: 0.5em;
+  margin-bottom: 2rem;
   a {
     text-decoration: none;
     color: black;
     transition: all 0.2s ease 0s;
-    font-size: 1.5rem;
-    font-weight: 500;
+    font-size: 2rem;
+    font-weight: 700;
     img {
       padding-left: 4rem;
     }
@@ -21,7 +24,8 @@
     display: flex;
     justify-content: flex-end;
     align-items: center;
-    padding-top: 4rem;
+    padding-top: 2em;
+    padding-right: 4em;
     div {
       list-style-type: none;
       padding: 4rem;
