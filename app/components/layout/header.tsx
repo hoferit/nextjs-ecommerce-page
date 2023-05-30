@@ -8,7 +8,12 @@ export default function Header() {
     <header className={styles.header}>
       <nav className={styles.headerNav}>
         <Link href="/" className={styles.headerLogo}>
-          <Image src="/splogo.jpg" width="300" height="300" />
+          <Image
+            src="/splogo.jpg"
+            alt="speedypals logo"
+            width="300"
+            height="300"
+          />
         </Link>
         <div className={styles.headerLinkBox}>
           <div className={styles.headerLinkWrap}>
@@ -26,8 +31,13 @@ export default function Header() {
             </Link>
           </div>
           <div className={styles.headerCartWrap}>
-            <Link className={styles.headerCartLink} href="/shoppingcart">
-              <Image src="/carticonblue.svg" width="100" height="100" />
+            <Link className={styles.headerCartLink} href="/cart">
+              <Image
+                src="/carticonblue.svg"
+                alt="cart icon"
+                width="100"
+                height="100"
+              />
             </Link>
           </div>
         </div>

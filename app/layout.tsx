@@ -1,5 +1,6 @@
 import './styles/globals.scss';
 import { Open_Sans } from 'next/font/google';
+import type { ReactNode } from 'react';
 import Footer from './components/layout/footer';
 import Header from './components/layout/header';
 
@@ -10,7 +11,7 @@ export const metadata = {
   description: 'Created by Michael Hofer',
 };
 
-export default function RootLayout({ children }) {
+export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html lang="en">
       <body className={nunito.className}>

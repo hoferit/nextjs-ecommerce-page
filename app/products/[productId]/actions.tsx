@@ -4,12 +4,14 @@ import { cookies } from 'next/headers';
 import { getCookie } from '../../../util/cookies';
 import { parseJson } from '../../../util/json';
 
-export async function addProduct(productId, quantity) {
+export async function addProduct(productId: number, quantity: number) {
   const cartCookie = getCookie('cart'); // get cart
   const cartItems = !cartCookie ? [] : parseJson(cartCookie); // check if cart existing, if not create empty array else parseJSON cart
-
+  type CartItem = {
+    id: number;
+  };
   // use find to get the needed product for the cart
-  const cartUpdate = cartItems.find((cartItem) => {
+  const cartUpdate = cartItems.find((cartItem: CartItem) => {
     return cartItem.id === productId;
   });
 

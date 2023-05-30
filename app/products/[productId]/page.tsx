@@ -5,13 +5,13 @@ import { getProductById } from '../../../database/products';
 import styles from '../../styles/productPage.module.scss';
 import AddToCart from './addtocart';
 
-// define type of productId params prop
+// define type of params productId = string because it's from the URL
 type Props = {
-  params: { productId: number };
+  params: { productId: string };
 };
 
 export default async function ProductPage(props: Props) {
-  const singleProduct = await getProductById(Number(props.params.productId)); // calling function from database to get productId
+  const singleProduct = await getProductById(Number(props.params.productId)); // calling function from database to get productId with url params
   if (!singleProduct) {
     notFound();
   }
