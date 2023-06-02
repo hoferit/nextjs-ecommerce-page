@@ -1,4 +1,4 @@
-import '../styles/globals.scss';
+import '../../styles/globals.scss';
 import Image from 'next/image';
 import Link from 'next/link';
 import DeleteItemButton from './deleteitembutton';

@@ -1,6 +1,6 @@
 'use client';
 import { useState } from 'react';
-import styles from '../styles/quantity.module.scss';
+import styles from '../../styles/quantity.module.scss';
 import { changeCartQuantity } from './changequantityactions';
 
 type Props = {

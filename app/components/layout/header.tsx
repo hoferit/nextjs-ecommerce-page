@@ -2,8 +2,8 @@ import '../../styles/globals.scss';
 import type { Route } from 'next';
 import Image from 'next/image';
 import Link from 'next/link';
-import { getCartItemsWithPrice } from '../../cart/getcartitemspriceactions';
 import styles from '../../styles/header.module.scss';
+import { getCartItemsWithPrice } from '../cart/getcartitemspriceactions';
 
 export default async function Header() {
   const cartItems = await getCartItemsWithPrice();
@@ -17,7 +17,7 @@ export default async function Header() {
     );
 
   return (
-    <header className={styles.header}>
+    <header>
       <nav className={styles.headerNav}>
         <Link href="/" className={styles.headerLogo}>
           <Image

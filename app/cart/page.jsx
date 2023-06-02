@@ -1,8 +1,8 @@
 import '../styles/globals.scss';
 import Link from 'next/link';
+import CartItems from '../components/cart/cartitems';
+import TotalPrice from '../components/cart/totalprice';
 import styles from '../styles/cartPage.module.scss';
-import CartItems from './cartitems';
-import TotalPrice from './totalprice';
 
 export default function ShoppingCartPage() {
   return (

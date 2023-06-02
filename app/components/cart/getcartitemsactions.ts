@@ -1,9 +1,9 @@
 'use server';
 
-import { getProducts } from '../../database/products';
-import { getCookie } from '../../util/cookies';
-import { parseJson } from '../../util/json';
-import { CartItem } from '../products/[productId]/actions';
+import { getProducts } from '../../../database/products';
+import { getCookie } from '../../../util/cookies';
+import { parseJson } from '../../../util/json';
+import { CartItem } from '../../products/[productId]/actions';
 
 export async function getCartItems() {
   const cartCookie = getCookie('cart');

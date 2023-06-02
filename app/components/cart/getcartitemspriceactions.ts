@@ -1,8 +1,8 @@
 'use server';
 
-import { getProducts } from '../../database/products';
-import { getCookie } from '../../util/cookies';
-import { parseJson } from '../../util/json';
+import { getProducts } from '../../../database/products';
+import { getCookie } from '../../../util/cookies';
+import { parseJson } from '../../../util/json';
 
 type CartItemWithPrice = {
   id: number;
