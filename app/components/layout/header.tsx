@@ -1,14 +1,27 @@
 import '../../styles/globals.scss';
+import type { Route } from 'next';
 import Image from 'next/image';
 import Link from 'next/link';
+import { getCartItemsWithPrice } from '../../cart/getcartitemspriceactions';
 import styles from '../../styles/header.module.scss';
 
-export default function Header() {
+export default async function Header() {
+  const cartItems = await getCartItemsWithPrice();
+  const total = cartItems
+    .map((cartItem) => {
+      return cartItem.quantity;
+    })
+    .reduce(
+      (totalQuantity, singleItemQuantity) => totalQuantity + singleItemQuantity,
+      0,
+    );
+
   return (
     <header className={styles.header}>
       <nav className={styles.headerNav}>
         <Link href="/" className={styles.headerLogo}>
           <Image
+            priority={true}
             src="/splogo.jpg"
             alt="speedypals logo"
             width="300"
@@ -38,6 +51,9 @@ export default function Header() {
                 width="100"
                 height="100"
               />
+              {total !== 0 ? (
+                <div className={styles.circle}>{total}</div>
+              ) : null}
             </Link>
           </div>
         </div>

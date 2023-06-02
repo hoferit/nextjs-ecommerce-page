@@ -3,10 +3,10 @@ import Image from 'next/image';
 import { notFound } from 'next/navigation';
 import { getProductById } from '../../../database/products';
 import styles from '../../styles/productPage.module.scss';
-import AddToCart from './addtocart';
+import QuantityButtons from './quantityproduct';
 
 // define type of params productId = string because it's from the URL
-type Props = {
+export type Props = {
   params: { productId: string };
 };
 
@@ -39,7 +39,7 @@ export default async function ProductPage(props: Props) {
             Price:{' '}
             <span data-test-id="product-price">{singleProduct.price}</span> €
           </p>
-          <AddToCart productId={singleProduct.id} />
+          <QuantityButtons productId={singleProduct.id} />
         </div>
       </section>
     </main>

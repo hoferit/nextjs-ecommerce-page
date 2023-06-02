@@ -33,3 +33,21 @@
     }
   }
 }
+.headerCartLink {
+  position: relative;
+}
+.circle {
+  position: absolute;
+  left: 8em;
+  bottom: 4em;
+  border-radius: 50%;
+  width: 16px;
+  height: 16px;
+  background: #fff;
+  border: 3px solid #f6856e;
+  padding: 8px !important;
+  line-height: 16px;
+  font-size: 16px;
+  color: #000;
+  text-align: center;
+}

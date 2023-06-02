@@ -1,7 +1,7 @@
 import '../styles/globals.scss';
 import Image from 'next/image';
 import Link from 'next/link';
-import { getProducts } from '../../database/products';
+import { getProducts, Product } from '../../database/products';
 import styles from '../styles/productsPage.module.scss';
 
 export default async function ProductsPage() {
@@ -10,7 +10,7 @@ export default async function ProductsPage() {
     <main className={styles.main}>
       <h1>Our Products</h1>
       <section className={styles.products}>
-        {products.map((product) => {
+        {products.map((product: Product) => {
           // map through product database and return all products
           return (
             <div

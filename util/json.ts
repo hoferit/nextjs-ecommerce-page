@@ -1,10 +1,10 @@
 import sjson from 'secure-json-parse';
 
-export function parseJson(string: string) {
-  if (!string) return undefined;
+export function parseJson(stringifiedJson: string) {
+  if (!stringifiedJson) return undefined;
 
   try {
-    return sjson(string);
+    return sjson(stringifiedJson);
   } catch {
     return undefined;
   }
