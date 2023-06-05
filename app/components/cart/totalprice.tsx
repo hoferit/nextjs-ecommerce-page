@@ -7,5 +7,5 @@ export default async function TotalPrice() {
       return cartItem.quantity * cartItem.price;
     })
     .reduce((totalPrice, singleItemPrice) => totalPrice + singleItemPrice, 0);
-  return <div data-test-id="cart-total">Total Price: {total}</div>;
+  return <div data-test-id="cart-total">Total Price: {total} €</div>;
 }

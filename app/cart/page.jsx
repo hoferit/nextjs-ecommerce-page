@@ -16,12 +16,13 @@ export default function ShoppingCartPage() {
       </section>
       <section className={styles.total}>
         <TotalPrice />
+        <br />
         <Link
-          className={styles.checkoutButton}
+          className={styles.checkoutButtonLink}
           href="/checkout"
           data-test-id="cart-checkout"
         >
-          Checkout
+          <span className={styles.checkoutButton}>Checkout</span>
         </Link>
       </section>
     </main>

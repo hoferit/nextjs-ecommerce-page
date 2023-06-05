@@ -7,14 +7,11 @@ import { getCartItemsWithPrice } from '../cart/getcartitemspriceactions';
 
 export default async function Header() {
   const cartItems = await getCartItemsWithPrice();
-  const total = cartItems
+  const totalQuantity = cartItems
     .map((cartItem) => {
       return cartItem.quantity;
     })
-    .reduce(
-      (totalQuantity, singleItemQuantity) => totalQuantity + singleItemQuantity,
-      0,
-    );
+    .reduce((total, singleItemQuantity) => total + singleItemQuantity, 0);
 
   return (
     <header>
@@ -51,8 +48,8 @@ export default async function Header() {
                 width="100"
                 height="100"
               />
-              {total !== 0 ? (
-                <div className={styles.circle}>{total}</div>
+              {totalQuantity !== 0 ? (
+                <div className={styles.circle}>{totalQuantity}</div>
               ) : null}
             </Link>
           </div>
