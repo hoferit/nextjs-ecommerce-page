@@ -6,8 +6,8 @@ import styles from '../styles/checkout.module.scss';
 
 export default function CheckoutForm() {
   const router = useRouter();
-  const handleSubmit = (element: React.FormEvent) => {
-    element.preventDefault();
+  const handleSubmit = (event: React.FormEvent) => {
+    event.preventDefault();
     router.push('/thankyou');
   };
   return (

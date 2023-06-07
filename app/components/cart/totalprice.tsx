@@ -1,5 +1,7 @@
 import { getCartItemsWithPrice } from './getcartitemspriceactions';
 
+export const dynamic = 'force-dynamic';
+
 export default async function TotalPrice() {
   const cartItems = await getCartItemsWithPrice();
   const total = cartItems

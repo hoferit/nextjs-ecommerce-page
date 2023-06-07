@@ -5,6 +5,8 @@ import DeleteItemButton from './deleteitembutton';
 import { getCartItems } from './getcartitemsactions';
 import QuantityButtonsCart from './quantitybuttonscart';
 
+export const dynamic = 'force-dynamic';
+
 export default async function CartItems() {
   const cartItems = await getCartItems();
   return (

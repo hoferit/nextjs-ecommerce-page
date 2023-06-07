@@ -1,9 +1,10 @@
 import '../../styles/globals.scss';
-import type { Route } from 'next';
 import Image from 'next/image';
 import Link from 'next/link';
 import styles from '../../styles/header.module.scss';
 import { getCartItemsWithPrice } from '../cart/getcartitemspriceactions';
+
+export const dynamic = 'force-dynamic';
 
 export default async function Header() {
   const cartItems = await getCartItemsWithPrice();
