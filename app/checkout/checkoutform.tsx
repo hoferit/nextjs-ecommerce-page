@@ -12,12 +12,13 @@ export default function CheckoutForm() {
   };
   return (
     <main className={styles.main}>
-      <div className={styles.wrapper}>
+      <div className={styles.wrapperCheckout}>
         <section className={styles.checkoutFormContainer}>
           <h1>Checkout</h1>
+
           <form className={styles.checkoutForm} onSubmit={handleSubmit}>
-            <h3>Customer Info</h3>
-            <div className={styles.name}>
+            <fieldset className={styles.name}>
+              <legend>Customer Info</legend>
               <label className={styles.inputLabel}>
                 First Name
                 <input
@@ -34,8 +35,8 @@ export default function CheckoutForm() {
                   required
                 />
               </label>
-            </div>
-            <div className={styles.street}>
+            </fieldset>
+            <fieldset className={styles.street}>
               <label className={styles.inputLabel}>
                 Street
                 <input
@@ -44,8 +45,8 @@ export default function CheckoutForm() {
                   required
                 />
               </label>
-            </div>
-            <div className={styles.adressInfo}>
+            </fieldset>
+            <fieldset className={styles.adressInfo}>
               <label className={styles.inputLabel}>
                 City
                 <input
@@ -79,10 +80,11 @@ export default function CheckoutForm() {
                   required
                 />
               </label>
-            </div>
+            </fieldset>
 
-            <h3>Payment Info</h3>
-            <div className={styles.ccNum}>
+            <fieldset className={styles.ccNum}>
+              <legend>Payment Info</legend>
+
               <label className={styles.inputLabel}>
                 Credit Card Number
                 <input
@@ -94,8 +96,8 @@ export default function CheckoutForm() {
                   required
                 />
               </label>
-            </div>
-            <div className={styles.ccInfo}>
+            </fieldset>
+            <fieldset className={styles.ccInfo}>
               <label className={styles.inputLabel}>
                 Expiration Date
                 <input
@@ -112,7 +114,8 @@ export default function CheckoutForm() {
                   required
                 />
               </label>
-            </div>
+            </fieldset>
+
             <div className={styles.buttons}>
               <button
                 className={styles.confirmOrderButton}
@@ -120,8 +123,14 @@ export default function CheckoutForm() {
               >
                 Confirm Order
               </button>
-              <Link className={styles.backToCartLinkButton} href="/cart">
-                Back to Cart
+              <Link
+                className={styles.backToCartLink}
+                href="/cart"
+                role="button"
+              >
+                <span className={styles.backToCartLinkButton}>
+                  Back to Cart
+                </span>
               </Link>
             </div>
           </form>

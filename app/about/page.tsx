@@ -1,6 +1,10 @@
 import '../styles/globals.scss';
-import styles from '../styles/aboutPage.module.scss';
+import styles from '../styles/aboutpage.module.scss';
 
+export const metadata = {
+  title: 'About',
+  description: 'About our e-commerce Store selling speedy pals',
+};
 export default function AboutPage() {
   return (
     <main className={styles.main}>

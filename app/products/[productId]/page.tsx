@@ -2,9 +2,13 @@ import '../../styles/globals.scss';
 import Image from 'next/image';
 import { notFound } from 'next/navigation';
 import { getProductById } from '../../../database/products';
-import styles from '../../styles/productPage.module.scss';
+import styles from '../../styles/productpage.module.scss';
 import QuantityButtons from './quantityproduct';
 
+export const metadata = {
+  title: 'Product',
+  description: 'Choose Amount and add product to cart',
+};
 // define type of params productId = string because it's from the URL
 export type Props = {
   params: { productId: string };
@@ -23,7 +27,7 @@ export default async function ProductPage(props: Props) {
           <h1>{singleProduct.name}</h1>
           <figure className={styles.productImage}>
             <Image
-              alt={singleProduct.name}
+              alt={`${singleProduct.name} the ${singleProduct.type} sitting in a toy car`}
               src={`/images/${singleProduct.type}.jpeg`}
               data-test-id="product-image"
               width={512}

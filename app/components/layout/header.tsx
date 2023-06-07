@@ -21,8 +21,8 @@ export default async function Header() {
             priority={true}
             src="/splogo.jpg"
             alt="speedypals logo"
-            width="300"
-            height="300"
+            width="358"
+            height="325"
           />
         </Link>
         <div className={styles.headerLinkBox}>
@@ -41,15 +41,22 @@ export default async function Header() {
             </Link>
           </div>
           <div className={styles.headerCartWrap}>
-            <Link className={styles.headerCartLink} href="/cart">
+            <Link
+              className={styles.headerCartLink}
+              href="/cart"
+              data-test-id="cart-link"
+            >
               <Image
+                className={styles.headerCartLogo}
                 src="/carticonblue.svg"
                 alt="cart icon"
                 width="100"
                 height="100"
               />
               {totalQuantity !== 0 ? (
-                <div className={styles.circle}>{totalQuantity}</div>
+                <div className={styles.circle} data-test-id="cart-count">
+                  {totalQuantity}
+                </div>
               ) : null}
             </Link>
           </div>

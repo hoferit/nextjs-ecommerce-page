@@ -19,17 +19,17 @@ export default async function CartItems() {
           </h3>
           <Link href={`/../products/${String(item.id)}`}>
             <Image
-              alt={item.name}
+              alt={`${item.name} the ${item.type} sitting in a toy car`}
               src={`/images/${item.type}.jpeg`}
               data-test-id="product-image"
               width={128}
               height={128}
             />
           </Link>
-          <h3 data-test-id={`cart-product-quantity-${item.quantity}`}>
+          <h3 data-test-id={`cart-product-quantity-${item.id}`}>
             Quantity: {item.quantity}
           </h3>
-          <DeleteItemButton />
+          <DeleteItemButton productId={item.id} />
           <QuantityButtonsCart productId={item.id} quantity={item.quantity} />
         </div>
       ))}

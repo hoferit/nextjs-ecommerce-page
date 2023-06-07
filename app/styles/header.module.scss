@@ -9,7 +9,7 @@
   margin-bottom: 2rem;
   a {
     text-decoration: none;
-    color: #2fcfe4;
+    color: #3b3561;
     transition: all 0.2s ease 0s;
     font-size: 2rem;
     font-weight: 700;
@@ -35,6 +35,13 @@
 }
 .headerCartLink {
   position: relative;
+}
+.headerCartLogo {
+  transition: all 0.25s ease-in;
+}
+.headerCartLogo:hover {
+  filter: brightness(0) saturate(100%) invert(42%) sepia(99%) saturate(418%)
+    hue-rotate(139deg) brightness(85%) contrast(86%);
 }
 .circle {
   position: absolute;

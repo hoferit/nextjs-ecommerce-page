@@ -14,9 +14,9 @@ export async function getCartItemsWithPrice() {
 
   const cartItems = !cartCookie ? [] : parseJson(cartCookie);
 
-  const items = await getProducts();
+  const itemsFromDb = await getProducts();
 
-  const cartItemsList = items
+  const cartItemsList = itemsFromDb
     .filter((item: CartItemWithPrice) =>
       cartItems.some((cartItem: CartItemWithPrice) => cartItem.id === item.id),
     )
@@ -29,4 +29,3 @@ export async function getCartItemsWithPrice() {
 
   return cartItemsList;
 }
-// i want to return ...item quantity etc...

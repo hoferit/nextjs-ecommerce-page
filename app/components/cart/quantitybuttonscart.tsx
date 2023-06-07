@@ -29,12 +29,14 @@ export default function QuantityButtonsCart(props: Props) {
       >
         <button
           className={`${styles.quantityModifier} ${styles.left}`}
+          data-test-id="product-decrement"
           onClick={handleDecrement}
         >
           &mdash;
         </button>
         <button
           className={`${styles.quantityModifier} ${styles.right}`}
+          data-test-id="product-increment"
           onClick={handleIncrement}
         >
           &#xff0b;

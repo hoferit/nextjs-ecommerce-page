@@ -2,7 +2,12 @@ import '../styles/globals.scss';
 import Image from 'next/image';
 import Link from 'next/link';
 import { getProducts, Product } from '../../database/products';
-import styles from '../styles/productsPage.module.scss';
+import styles from '../styles/productspage.module.scss';
+
+export const metadata = {
+  title: 'Products',
+  description: 'Choose your product',
+};
 
 export default async function ProductsPage() {
   const products = await getProducts();
@@ -23,7 +28,7 @@ export default async function ProductsPage() {
                   data-test-id={`product-${product.id}`}
                 >
                   <Image
-                    alt={product.name}
+                    alt={`${product.name} the ${product.type} sitting in a toy car`}
                     src={`/images/${product.type}.jpeg`}
                     width="350"
                     height="350"
@@ -34,7 +39,7 @@ export default async function ProductsPage() {
                 <h4>
                   {product.name} the {product.type}
                 </h4>
-                <h6>{product.price} €</h6>
+                <h5>{product.price} €</h5>
               </figcaption>
             </div>
           );

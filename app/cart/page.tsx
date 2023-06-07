@@ -2,8 +2,12 @@ import '../styles/globals.scss';
 import Link from 'next/link';
 import CartItems from '../components/cart/cartitems';
 import TotalPrice from '../components/cart/totalprice';
-import styles from '../styles/cartPage.module.scss';
+import styles from '../styles/cartpage.module.scss';
 
+export const metadata = {
+  title: 'Shopping Cart',
+  description: 'Shopping Cart overview before checkout',
+};
 export default function ShoppingCartPage() {
   return (
     <main className={styles.main}>
@@ -15,6 +19,7 @@ export default function ShoppingCartPage() {
         </div>
       </section>
       <section className={styles.total}>
+        {/* @ts-expect-error Server Component */}
         <TotalPrice />
         <br />
         <Link

@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { ChangeEvent, useState } from 'react';
 import styles from '../../styles/quantity.module.scss';
 import { addProductAmount } from './actions';
 
@@ -9,7 +9,6 @@ type Props = {
 };
 export default function QuantityButtons(props: Props) {
   const [quantity, setQuantity] = useState(1);
-  // what to do? i need to stop setting the cookies by state and set them by form confirmation. the counter should be separate
   const handleIncrement = () => {
     setQuantity((prevCount) => prevCount + 1);
   };
@@ -23,6 +22,7 @@ export default function QuantityButtons(props: Props) {
       <div className={styles.quantityWrap}>
         <button
           className={`${styles.quantityModifier} ${styles.left}`}
+          data-test-id="product-decrement"
           onClick={handleDecrement}
         >
           &mdash;
@@ -35,6 +35,7 @@ export default function QuantityButtons(props: Props) {
         />
         <button
           className={`${styles.quantityModifier} ${styles.right}`}
+          data-test-id="product-increment"
           onClick={handleIncrement}
         >
           &#xff0b;
