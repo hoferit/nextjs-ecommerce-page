@@ -1,0 +1,90 @@
+.main {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 2rem 6rem;
+  align-items: center;
+  justify-content: center;
+}
+
+.itemsWrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  flex-direction: column;
+  gap: 1em;
+  h1 {
+    padding: 1.25em;
+    font-weight: 400;
+    text-align: center;
+  }
+}
+.items {
+  gap: 2em;
+  display: flex;
+  padding: 2em 2em 1em;
+  box-shadow: 0 15px 30px 0 rgba(0, 0, 0, 0.11),
+    0 5px 15px 0 rgba(0, 0, 0, 0.08);
+  background-color: #f6856e;
+
+  border-radius: 0.5rem;
+  flex-direction: column;
+}
+.itemBox {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  gap: 2em;
+  align-items: center;
+}
+.itemPictureLink {
+  border-left: 0.5rem solid transparent;
+  transition: border-left 300ms ease-in-out, padding-left 300ms ease-in-out;
+}
+
+.itemPictureLink:hover {
+  border-left: 0.5rem solid #6fe0f5;
+}
+.total {
+  padding: 2em;
+  box-shadow: 0 15px 30px 0 rgba(0, 0, 0, 0.11),
+    0 5px 15px 0 rgba(0, 0, 0, 0.08);
+  background-color: #f6856e;
+  border-radius: 0.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.totalPrice {
+  padding: 1.25rem;
+}
+.deleteButton {
+  margin: 8px 0;
+  height: 32px;
+  color: #cfc9e1;
+  background-color: #4a3b76;
+  text-transform: uppercase;
+  border: none;
+  letter-spacing: 2px;
+  &:focus {
+    outline: none;
+  }
+  &:hover {
+    color: #6cddec;
+  }
+}
+.checkoutButton {
+  margin: 8px 0;
+  height: 32px;
+  width: 40%;
+  color: #cfc9e1;
+  background-color: #4a3b76;
+  text-transform: uppercase;
+  border: none;
+  letter-spacing: 2px;
+  &:focus {
+    outline: none;
+  }
+  &:hover {
+    color: #6cddec;
+  }
+}
