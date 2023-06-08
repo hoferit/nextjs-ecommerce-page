@@ -1,4 +1,4 @@
-name: Playwright Tests and Deploy to Fly.io
+name: Playwright Tests
 on: push
 
 jobs:
@@ -8,9 +8,9 @@ jobs:
     # Update env variables with your own database credentials
     env:
       PGHOST: localhost
-      PGDATABASE: next_js_example_spring_2023
-      PGUSERNAME: next_js_example_spring_2023
-      PGPASSWORD: next_js_example_spring_2023
+      PGDATABASE: speedypals
+      PGUSERNAME: speedypals
+      PGPASSWORD: speedypals
     steps:
       - name: Start preinstalled PostgreSQL on Ubuntu
         run: |
@@ -18,10 +18,10 @@ jobs:
           pg_isready
       - name: Create database user
         run: |
-          sudo -u postgres psql --command="CREATE USER next_js_example_spring_2023 PASSWORD 'next_js_example_spring_2023'" --command="\du"
+          sudo -u postgres psql --command="CREATE USER speedypals PASSWORD 'speedypals'" --command="\du"
       - name: Create database and allow user
         run: |
-          sudo -u postgres createdb --owner=next_js_example_spring_2023 next_js_example_spring_2023
+          sudo -u postgres createdb --owner=speedypals speedypals
       - uses: actions/checkout@v3
       - uses: pnpm/action-setup@v2
         with:
