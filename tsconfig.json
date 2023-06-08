@@ -17,7 +17,6 @@
     "**/*.jsx",
     "**/*.cjs",
     "**/*.mjs",
-    ".next/types/**/*.ts",
-    "playwright/.spec.ts"
+    ".next/types/**/*.ts"
   ]
 }

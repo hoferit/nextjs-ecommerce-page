@@ -1,5 +1,5 @@
 import { expect, test } from '@jest/globals';
-import { cartSum } from '../util/testfunctions/cartsum';
+import { cartSum } from '../testfunctions/cartsum';
 
 test('update quantity of cart item', () => {
   const total = cartSum();
