@@ -7,22 +7,16 @@
   border-radius: 3px;
   user-select: none;
   outline: none;
-  background-color: lavenderblush;
-
-  &:focus {
-    background: red;
-  }
-}
-.quantityWrap {
-  margin-top: 2rem;
+  background-color: #f6856e;
+  padding-top: 5%;
 }
 .quantityModifier {
-  padding: 0.7rem;
+  padding: 0.75rem;
   width: 3rem;
   font-size: 1.5rem;
 
-  color: #6cddec;
-  background: hsla(10, 88%, 70%, 0.706);
+  color: #000;
+  background: #f6856e;
   border: 0 solid #dbdbdb;
   text-align: center;
   text-shadow: 0 1px 0 rgba(#fff, 0.6);
@@ -30,7 +24,6 @@
   cursor: pointer;
 
   &:hover {
-    color: rgba(246, 133, 110, 10);
     background: rgba(108, 221, 236, 20);
   }
 
@@ -47,23 +40,26 @@
   width: 4rem;
   padding: 0.7rem;
   font-size: 1.5rem;
-  color: hsla(10, 88%, 70%, 0.706);
+  color: #f6856e;
   border: 0;
   border-top: 0 solid #dbdbdb;
   border-bottom: 0 solid #dbdbdb;
   text-align: center;
 }
 .cartButton {
-  border: none;
-  text-align: center;
   margin-top: 2rem;
-  margin-bottom: 1rem;
-  font-size: 1.5rem;
-  padding: 0.7rem;
-  align-self: flex-end;
-  background: transparent;
-  color: hsla(10, 88%, 70%, 0.706);
-  transition: opacity 0.3s, border 0.3s;
+  margin-bottom: 2rem;
+  color: #cfc9e1;
+  background-color: #4a3b76;
+  text-transform: uppercase;
+  border: none;
+  letter-spacing: 2px;
+  font-size: 1.25em;
+  padding: 1.75rem;
+  text-align: center;
+  &:focus {
+    outline: none;
+  }
   &:hover {
     color: #6cddec;
   }

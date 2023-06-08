@@ -1,13 +1,15 @@
 'use client';
 
-import { ChangeEvent, useState } from 'react';
+import { useRouter } from 'next/navigation';
+import { useState } from 'react';
 import styles from '../../styles/quantity.module.scss';
-import { addProductAmount } from './actions';
+import { addProductAmount } from './addProductAmount';
 
 type Props = {
   productId: number;
 };
 export default function QuantityButtons(props: Props) {
+  const router = useRouter();
   const [quantity, setQuantity] = useState(1);
   const handleIncrement = () => {
     setQuantity((prevCount) => prevCount + 1);
@@ -19,7 +21,7 @@ export default function QuantityButtons(props: Props) {
 
   return (
     <div className={styles.buttonsWrap}>
-      <div className={styles.quantityWrap}>
+      <div>
         <button
           className={`${styles.quantityModifier} ${styles.left}`}
           data-test-id="product-decrement"
@@ -44,6 +46,7 @@ export default function QuantityButtons(props: Props) {
       <div className={styles.break} />
       <form
         action={async () => {
+          router.refresh();
           await addProductAmount(props.productId, quantity);
         }}
       >

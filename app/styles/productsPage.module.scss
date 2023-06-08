@@ -1,15 +1,18 @@
 .main {
   display: flex;
   flex-wrap: wrap;
-  padding: 2rem 6rem;
+  padding: 2rem 0rem;
   align-items: center;
   justify-content: center;
+
   h1 {
     padding: 2rem;
-    font-weight: 400;
+    font-weight: 600;
+    font-size: xx-large;
     text-align: center;
   }
 }
+
 .products {
   display: flex;
   flex-wrap: wrap;
@@ -23,7 +26,7 @@
   background-color: #ffffff;
   border-radius: 0.5rem;
 
-  border-left: 0 solid #6fe0f5;
+  border-left: 0.5rem solid transparent;
   transition: border-left 300ms ease-in-out, padding-left 300ms ease-in-out;
   align-items: center;
   .buttons {
@@ -33,7 +36,6 @@
 }
 
 .productCard:hover {
-  padding-left: 0.5rem;
   border-left: 0.5rem solid #6fe0f5;
 }
 

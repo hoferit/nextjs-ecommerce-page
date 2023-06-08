@@ -36,7 +36,7 @@ export default function CheckoutForm() {
                 />
               </label>
             </fieldset>
-            <fieldset className={styles.street}>
+            <fieldset>
               <label className={styles.inputLabel}>
                 Street
                 <input
@@ -45,8 +45,7 @@ export default function CheckoutForm() {
                   required
                 />
               </label>
-            </fieldset>
-            <fieldset className={styles.adressInfo}>
+
               <label className={styles.inputLabel}>
                 City
                 <input
@@ -123,11 +122,7 @@ export default function CheckoutForm() {
               >
                 Confirm Order
               </button>
-              <Link
-                className={styles.backToCartLink}
-                href="/cart"
-                role="button"
-              >
+              <Link href="/cart" role="button">
                 <span className={styles.backToCartLinkButton}>
                   Back to Cart
                 </span>

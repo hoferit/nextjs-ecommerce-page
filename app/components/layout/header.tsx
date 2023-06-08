@@ -2,9 +2,7 @@ import '../../styles/globals.scss';
 import Image from 'next/image';
 import Link from 'next/link';
 import styles from '../../styles/header.module.scss';
-import { getCartItemsWithPrice } from '../cart/getcartitemspriceactions';
-
-export const dynamic = 'force-dynamic';
+import { getCartItemsWithPrice } from '../cart/getCartItemsWithPrice';
 
 export default async function Header() {
   const cartItems = await getCartItemsWithPrice();
@@ -17,7 +15,7 @@ export default async function Header() {
   return (
     <header>
       <nav className={styles.headerNav}>
-        <Link href="/" className={styles.headerLogo}>
+        <Link href="/">
           <Image
             priority={true}
             src="/splogo.jpg"
@@ -27,21 +25,15 @@ export default async function Header() {
           />
         </Link>
         <div className={styles.headerLinkBox}>
-          <div className={styles.headerLinkWrap}>
-            <Link className={styles.headerLink} href="/about">
-              About
-            </Link>
+          <div>
+            <Link href="/about">About</Link>
           </div>
-          <div className={styles.headerLinkWrap}>
-            <Link
-              className={styles.headerLink}
-              href="/products"
-              data-test-id="products-link"
-            >
+          <div>
+            <Link href="/products" data-test-id="products-link">
               Products
             </Link>
           </div>
-          <div className={styles.headerCartWrap}>
+          <div>
             <Link
               className={styles.headerCartLink}
               href="/cart"

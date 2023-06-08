@@ -1,4 +1,4 @@
-import { CartItem } from '../../app/products/[productId]/actions';
+import { CartItem } from '../../app/products/[productId]/addProductAmount';
 
 const cartItems = [
   { id: 1, quantity: 1 },

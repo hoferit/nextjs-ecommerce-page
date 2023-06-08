@@ -3,14 +3,12 @@ import Image from 'next/image';
 import { notFound } from 'next/navigation';
 import { getProductById } from '../../../database/products';
 import styles from '../../styles/productpage.module.scss';
-import QuantityButtons from './quantityproduct';
+import QuantityButtons from './QuantityButtons';
 
 export const metadata = {
   title: 'Product',
   description: 'Choose Amount and add product to cart',
 };
-
-export const dynamic = 'force-dynamic';
 
 // define type of params productId = string because it's from the URL
 export type Props = {

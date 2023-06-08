@@ -1,4 +1,6 @@
-import { getCartItemsWithPrice } from './getcartitemspriceactions';
+import styles from '../../styles/cartpage.module.scss';
+import CheckoutButton from './CheckoutButton';
+import { getCartItemsWithPrice } from './getCartItemsWithPrice';
 
 export const dynamic = 'force-dynamic';
 
@@ -9,5 +11,14 @@ export default async function TotalPrice() {
       return cartItem.quantity * cartItem.price;
     })
     .reduce((totalPrice, singleItemPrice) => totalPrice + singleItemPrice, 0);
-  return <div data-test-id="cart-total">Total Price: {total} €</div>;
+  return total !== 0 ? (
+    <div className={styles.total}>
+      <div className={styles.totalPrice} data-test-id="cart-total">
+        Total Price: {total} €
+      </div>
+      <CheckoutButton />
+    </div>
+  ) : (
+    <h2>Your Shopping Cart is empty!</h2>
+  );
 }

@@ -9,13 +9,12 @@ export const metadata = {
   description: 'Choose your product',
 };
 
-export const dynamic = 'force-dynamic';
-
 export default async function ProductsPage() {
   const products = await getProducts();
   return (
     <main className={styles.main}>
       <h1>Our Products</h1>
+
       <section className={styles.products}>
         {products.map((product: Product) => {
           // map through product database and return all products

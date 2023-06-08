@@ -1,7 +1,7 @@
 'use client';
 import { useState } from 'react';
 import styles from '../../styles/quantity.module.scss';
-import { changeCartQuantity } from './changequantityactions';
+import { changeCartQuantity } from './changeCartQuantity';
 
 type Props = {
   productId: number;
@@ -21,7 +21,7 @@ export default function QuantityButtonsCart(props: Props) {
   };
 
   return (
-    <div className={styles.quantityWrap}>
+    <div>
       <form
         action={async () => {
           await changeCartQuantity(props.productId, amount);

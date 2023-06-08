@@ -6,7 +6,7 @@ export default function Home() {
     <main className={styles.main}>
       <section>
         <h1>Welcome to Speedy Pals!</h1>
-        <h1>Buy your own Speedy Pal!</h1>
+        <h1>Buy your own Baby Animal Pet Toy!</h1>
         <h1>Toy Car included!</h1>
       </section>
     </main>

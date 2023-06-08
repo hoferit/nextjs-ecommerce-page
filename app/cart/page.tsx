@@ -1,7 +1,6 @@
 import '../styles/globals.scss';
-import Link from 'next/link';
-import CartItems from '../components/cart/cartitems';
-import TotalPrice from '../components/cart/totalprice';
+import CartItems from '../components/cart/CartItems';
+import TotalPrice from '../components/cart/TotalPrice';
 import styles from '../styles/cartpage.module.scss';
 
 export const metadata = {
@@ -9,29 +8,21 @@ export const metadata = {
   description: 'Shopping Cart overview before checkout',
 };
 
+// todo: if else statement to show button if cart is filled, implement
+
 export const dynamic = 'force-dynamic';
 
 export default function ShoppingCartPage() {
   return (
     <main className={styles.main}>
-      <h1>Basket</h1>
-      <section className={styles.items}>
-        <div className={styles.itemsWrapper}>
-          {/* @ts-expect-error Server Component */}
-          <CartItems />
-        </div>
-      </section>
-      <section className={styles.total}>
+      <section className={styles.itemsWrapper}>
+        <h1>Shopping Cart</h1>
+
+        {/* @ts-expect-error Server Component */}
+        <CartItems />
+
         {/* @ts-expect-error Server Component */}
         <TotalPrice />
-        <br />
-        <Link
-          className={styles.checkoutButtonLink}
-          href="/checkout"
-          data-test-id="cart-checkout"
-        >
-          <span className={styles.checkoutButton}>Checkout</span>
-        </Link>
       </section>
     </main>
   );

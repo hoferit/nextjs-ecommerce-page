@@ -1,4 +1,4 @@
-import CheckoutForm from './checkoutform';
+import CheckoutForm from './CheckoutForm';
 
 export const metadata = {
   title: 'Checkout',

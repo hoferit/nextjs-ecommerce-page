@@ -3,7 +3,7 @@
 import { cookies } from 'next/headers';
 import { getCookie } from '../../../util/cookies';
 import { parseJson } from '../../../util/json';
-import { CartItem } from '../../products/[productId]/actions';
+import { CartItem } from '../../products/[productId]/addProductAmount';
 
 export async function deleteCartItem(productId: number) {
   const cartCookie = getCookie('cart');

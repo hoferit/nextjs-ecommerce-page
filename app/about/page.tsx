@@ -9,61 +9,56 @@ export const metadata = {
 export default function AboutPage() {
   return (
     <main className={styles.main}>
-      <h1>About Speedy Pals</h1>
-      <article>
-        <p>
-          Welcome to our e-commerce store, where imagination meets cuddles! We
-          take pride in introducing our delightful collection of plush baby
-          animal toys, each one nestled comfortably in their own adorable toy
-          car. These enchanting companions are designed to captivate the hearts
-          of both children and adults alike, fostering endless hours of joy,
-          creativity, and companionship.
-        </p>
-        <p>
-          Crafted with meticulous attention to detail, our plush baby animals
-          are exquisitely soft and irresistibly huggable. They are carefully
-          selected to embody the innocence and charm of their real-life
-          counterparts, bringing the wonders of the animal kingdom into the
-          hands of your little ones. From playful puppies to mischievous
-          kittens, from gentle bunnies to curious monkeys, our range offers a
-          diverse menagerie of lovable characters.
-        </p>
-        <p>
-          Each plush baby animal is thoughtfully paired with their very own toy
-          car, providing an exciting mode of transportation through imaginative
-          play. These miniature vehicles are designed to complement the charm
-          and personality of their fluffy passengers, fostering a sense of
-          adventure as children embark on imaginary journeys together. The
-          attention to detail in both the plush animals and their cars ensures a
-          seamless integration of fun and comfort, allowing children to explore
-          their boundless creativity in a safe and engaging way.
-        </p>
-
-        <p>
-          At our e-commerce store, we understand the importance of quality and
-          safety when it comes to children's toys. That is why all our plush
-          baby animals undergo rigorous testing to meet the highest standards of
-          craftsmanship and child safety regulations. We prioritize the use of
-          hypoallergenic materials that are both durable and gentle on delicate
-          skin, ensuring a worry-free playtime experience for both children and
-          parents.
-        </p>
-        <p>
-          Whether you are seeking the perfect gift for a special occasion or
-          simply looking to spark your child's imagination, our plush baby
-          animal toys are designed to be cherished companions that will
-          accompany your little ones on countless adventures. Their endearing
-          presence and comforting softness offer not just a toy, but a trusted
-          friend, encouraging emotional development and nurturing the power of
-          imagination.
-        </p>
-        <p>
-          We invite you to explore our enchanting collection and discover the
-          magic that our plush baby animal toys can bring to your child's world.
-          Let the smiles, giggles, and cuddles abound as you embark on a journey
-          filled with warmth, love, and endless moments of joy.
-        </p>
-      </article>
+      <section>
+        <article>
+          <h2>About Speedy Pals:</h2>
+          <p>
+            Welcome to our e-commerce store, where imagination and playfulness
+            come to life! Explore our enchanting collection of plush baby
+            animals sitting in toy cars. Each toy is meticulously designed to
+            bring joy, comfort, and endless fun to children.
+          </p>
+        </article>
+        <article>
+          <h2>Premium Craftsmanship:</h2>
+          <p>
+            Crafted with love and care, our plush baby animals feature exquisite
+            details and are made from premium materials. From the velvety touch
+            of their fur to the carefully stitched accents, these toys are
+            perfect for cuddling and companionship.
+          </p>
+        </article>
+        <article>
+          <h2>Imaginative Play:</h2>
+          <p>
+            Paired with vibrant toy cars, our plush baby animals offer more than
+            just a ride. They inspire imaginative play and promote the
+            development of fine motor skills. Choose from charming characters
+            like the adorable Alpaca, majestic Elephant, and playful Panda.
+          </p>
+        </article>
+        <article>
+          <h2>Safety First:</h2>
+          <p>
+            We prioritize your child's safety. Our toys adhere to the highest
+            safety standards, ensuring they are free from harmful substances and
+            designed without any choking hazards. You can have peace of mind
+            while your child explores and plays.
+          </p>
+        </article>
+        <article>
+          <h2>Delightful Childhood Memories:</h2>
+          <p>
+            Join us in cultivating wonder, creativity, and joy in the lives of
+            children. Let their imagination soar as they embark on exciting
+            adventures with our plush baby animals sitting in toy cars.
+          </p>
+          <p>
+            Thank you for choosing our e-commerce store as your partner in
+            creating cherished childhood memories. Start your journey today!
+          </p>
+        </article>
+      </section>
     </main>
   );
 }
