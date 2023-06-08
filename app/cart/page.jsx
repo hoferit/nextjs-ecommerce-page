@@ -18,10 +18,8 @@ export default function ShoppingCartPage() {
       <section className={styles.itemsWrapper}>
         <h1>Shopping Cart</h1>
 
-        {/* @ts-expect-error Server Component */}
         <CartItems />
 
-        {/* @ts-expect-error Server Component */}
         <TotalPrice />
       </section>
     </main>
