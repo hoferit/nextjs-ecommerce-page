@@ -29,7 +29,7 @@ export default async function ProductPage(props: Props) {
           <figure className={styles.productImage}>
             <Image
               alt={`${singleProduct.name} the ${singleProduct.type} sitting in a toy car`}
-              src={`/images/${singleProduct.type}.jpeg`}
+              src={`/images/${singleProduct.type.toLowerCase()}.jpeg`}
               data-test-id="product-image"
               width={512}
               height={512}

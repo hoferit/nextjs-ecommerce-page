@@ -30,7 +30,7 @@ export default async function ProductsPage() {
                 <figure className={styles.productImage}>
                   <Image
                     alt={`${product.name} the ${product.type} sitting in a toy car`}
-                    src={`/images/${product.type}.jpeg`}
+                    src={`/images/${product.type.toLowerCase()}.jpeg`}
                     width="350"
                     height="350"
                   />

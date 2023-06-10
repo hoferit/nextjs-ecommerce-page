@@ -22,7 +22,7 @@ export default async function CartItems() {
             >
               <Image
                 alt={`${item.name} the ${item.type} sitting in a toy car`}
-                src={`/images/${item.type}.jpeg`}
+                src={`/images/${item.type.toLowerCase()}.jpeg`}
                 data-test-id="product-image"
                 width={128}
                 height={128}
