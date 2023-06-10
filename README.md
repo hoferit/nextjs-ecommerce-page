@@ -1,6 +1,6 @@
 # Next.js Ecommerce Store "Speedy Pals"
 
-![Speedy Pals](/docs/_media/checkoutform.png)
+![Speedy Pals](/docs/_media/landingpage.png)
 
 ## Description
 
