@@ -3,12 +3,16 @@ import '../styles/globals.scss';
 import Link from 'next/link';
 import { useRouter } from 'next/navigation';
 import styles from '../styles/checkout.module.scss';
+import { emptyCart } from './emptyCart';
 
 export default function CheckoutForm() {
   const router = useRouter();
-  const handleSubmit = (event: React.FormEvent) => {
+
+  const handleSubmit = async (event: React.FormEvent) => {
     event.preventDefault();
+    await emptyCart();
     router.push('/thankyou');
+    router.refresh();
   };
   return (
     <main className={styles.main}>

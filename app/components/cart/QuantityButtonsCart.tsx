@@ -11,7 +11,6 @@ type Props = {
 export default function QuantityButtonsCart(props: Props) {
   const [amount, setAmount] = useState(props.quantity);
 
-  // what to do? i need to stop setting the cookies by state and set them by form confirmation. the counter should be separate
   const handleIncrement = () => {
     setAmount((prevCount) => prevCount + 1);
   };

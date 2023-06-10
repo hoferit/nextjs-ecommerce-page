@@ -1,5 +1,11 @@
 .main {
-  background-color: lavenderblush;
+  background: linear-gradient(
+    170deg,
+    #f6856e,
+    #f6856e 60%,
+    #6cddec 60%,
+    #6cddec
+  );
   width: 85%;
   display: flex;
   flex-wrap: wrap;

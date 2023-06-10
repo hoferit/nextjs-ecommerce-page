@@ -14,7 +14,7 @@ export default async function TotalPrice() {
   return total !== 0 ? (
     <div className={styles.total}>
       <div className={styles.totalPrice} data-test-id="cart-total">
-        Total Price: {total} €
+        <h4>Total Price: {total} €</h4>
       </div>
       <CheckoutButton />
     </div>

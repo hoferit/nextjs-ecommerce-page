@@ -23,25 +23,25 @@ export default async function ProductsPage() {
               key={`product-div-${product.id}`}
               className={styles.productCard}
             >
-              <figure className={styles.productImage}>
-                <Link
-                  href={`/products/${product.id}`}
-                  data-test-id={`product-${product.id}`}
-                >
+              <Link
+                href={`/products/${product.id}`}
+                data-test-id={`product-${product.id}`}
+              >
+                <figure className={styles.productImage}>
                   <Image
                     alt={`${product.name} the ${product.type} sitting in a toy car`}
                     src={`/images/${product.type}.jpeg`}
                     width="350"
                     height="350"
                   />
-                </Link>
-              </figure>
-              <figcaption className={styles.productInfo}>
-                <h4>
-                  {product.name} the {product.type}
-                </h4>
-                <h5>{product.price} €</h5>
-              </figcaption>
+                </figure>
+                <figcaption className={styles.productInfo}>
+                  <h4>
+                    {product.name} the {product.type}
+                  </h4>
+                  <h5>{product.price} €</h5>
+                </figcaption>
+              </Link>
             </div>
           );
         })}

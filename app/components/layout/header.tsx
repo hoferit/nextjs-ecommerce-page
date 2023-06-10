@@ -15,21 +15,30 @@ export default async function Header() {
   return (
     <header>
       <nav className={styles.headerNav}>
-        <Link href="/">
-          <Image
-            priority={true}
-            src="/splogo.jpg"
-            alt="speedypals logo"
-            width="358"
-            height="325"
-          />
-        </Link>
+        <div className={styles.headerLogoBox}>
+          <Link href="/">
+            <Image
+              priority={true}
+              src="/splogo.jpg"
+              alt="speedypals logo"
+              width="358"
+              height="325"
+            />
+          </Link>
+        </div>
+
         <div className={styles.headerLinkBox}>
           <div>
-            <Link href="/about">About</Link>
+            <Link className={styles.headerLink} href="/about">
+              About
+            </Link>
           </div>
           <div>
-            <Link href="/products" data-test-id="products-link">
+            <Link
+              className={styles.headerLink}
+              href="/products"
+              data-test-id="products-link"
+            >
               Products
             </Link>
           </div>

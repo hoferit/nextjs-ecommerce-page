@@ -3,11 +3,11 @@ import Image from 'next/image';
 import Link from 'next/link';
 import styles from '../../styles/cartpage.module.scss';
 import DeleteItemButton from './DeleteItemButton';
-import { getCartItems } from './getCartItems';
+import { getCartItemsWithPrice } from './getCartItemsWithPrice';
 import QuantityButtonsCart from './QuantityButtonsCart';
 
 export default async function CartItems() {
-  const cartItems = await getCartItems();
+  const cartItems = await getCartItemsWithPrice();
   return (
     <>
       {cartItems.map((item) => (
@@ -36,6 +36,7 @@ export default async function CartItems() {
               Quantity: {item.quantity}
             </h4>
             <QuantityButtonsCart productId={item.id} quantity={item.quantity} />
+            <h4>Subtotal: {item.price * item.quantity} €</h4>
             <DeleteItemButton productId={item.id} />
           </div>
         </div>

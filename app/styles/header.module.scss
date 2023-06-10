@@ -2,50 +2,54 @@
   background-color: white;
   display: flex;
   align-items: flex-start;
+  flex-wrap: wrap;
   justify-content: space-between;
   list-style-type: none;
   box-shadow: 0 8px 24px 0 rgba(0, 0, 0, 0.11), 0 4px 16px 0 rgba(0, 0, 0, 0.08);
   border-radius: 0.5em;
   margin-bottom: 2rem;
-  a {
-    text-decoration: none;
-    color: #3b3561;
-    transition: all 0.2s ease 0s;
-    font-size: 2rem;
-    font-weight: 700;
-    img {
-      padding-left: 4rem;
-    }
+  max-width: 1350px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.headerLogoBox {
+  display: flex;
+  padding-right: 12em;
+  img {
+    padding-left: 4rem;
   }
-  a:hover {
+}
+.headerLink {
+  text-decoration: none;
+  color: #3b3561;
+  transition: all 0.2s ease 0s;
+  font-size: 2rem;
+  font-weight: 700;
+
+  .headerLink:hover {
     color: #0c525b;
   }
-  .headerLinkBox {
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    padding-top: 2em;
-    padding-right: 4em;
-    div {
-      list-style-type: none;
-      padding: 4rem;
-      margin-right: 1.25rem;
-    }
+}
+.headerLinkBox {
+  display: flex;
+  align-items: center;
+  width: auto;
+  padding: 4em;
+  div {
+    padding: 2em;
+    margin-right: 1.25rem;
   }
 }
 .headerCartLink {
   position: relative;
 }
-.headerCartLogo {
-  transition: all 0.25s ease-in;
-}
 .headerCartLogo:hover {
-  filter: brightness(0) saturate(100%) invert(42%) sepia(99%) saturate(418%)
-    hue-rotate(139deg) brightness(85%) contrast(86%);
+  filter: brightness(0) saturate(100%) invert(78%) sepia(11%) saturate(7470%)
+    hue-rotate(142deg) brightness(88%) contrast(89%);
 }
 .circle {
   position: absolute;
-  left: 8em;
+  left: 4em;
   bottom: 4em;
   border-radius: 50%;
   width: 16px;

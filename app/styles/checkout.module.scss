@@ -4,9 +4,17 @@
   padding: 2rem 6rem;
   flex-wrap: wrap;
   align-items: center;
+  background: linear-gradient(
+    170deg,
+    #f6856e,
+    #f6856e 60%,
+    #6cddec 60%,
+    #6cddec
+  );
   h1 {
     padding: 2rem;
-    font-weight: 400;
+    font-weight: 600;
+    font-size: xx-large;
     text-align: center;
   }
 }
@@ -15,7 +23,7 @@
   width: 60%;
   display: flex;
   justify-content: center;
-  background-color: #f6856e;
+  background-color: #fff;
   box-shadow: 8px 13px 25px 0px rgba(0, 0, 0, 0.18);
   h1 {
     align-self: center;

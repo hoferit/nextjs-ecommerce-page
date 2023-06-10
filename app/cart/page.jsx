@@ -8,8 +8,6 @@ export const metadata = {
   description: 'Shopping Cart overview before checkout',
 };
 
-// todo: if else statement to show button if cart is filled, implement
-
 export const dynamic = 'force-dynamic';
 
 export default function ShoppingCartPage() {
