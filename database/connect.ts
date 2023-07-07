@@ -13,12 +13,13 @@ declare module globalThis {
 // https://github.com/vercel/next.js/issues/7811#issuecomment-715259370
 function connectOneTimeToDatabase() {
   if (!globalThis.postgresSqlClient) {
-    globalThis.postgresSqlClient = postgres({
-      host: process.env.POSTGRES_HOST || process.env.PG_HOST,
-      username: process.env.POSTGRES_USER || process.env.PGUSERNAME,
-      password: process.env.POSTGRES_PASSWORD || process.env.PGPASSWORD,
-      database: process.env.POSTGRES_DATABASE || process.env.PGDATABASE,
-      ssl: !!process.env.POSTGRES_URL,
+    const databaseURL = process.env.DATABASE_URL || '';
+
+    globalThis.postgresSqlClient = postgres(databaseURL, {
+      ssl: {
+        rejectUnauthorized: false,
+        mode: 'require',
+      },
       transform: {
         ...postgres.camel,
         undefined: null,
