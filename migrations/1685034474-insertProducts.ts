@@ -18,10 +18,10 @@ export const products = [
 export async function up(sql: Sql) {
   for (const product of products) {
     await sql`
-  INSERT INTO products
-  (name, type, price)
-VALUES
-    (${product.name}, ${product.type}, ${product.price})
+    INSERT INTO products
+      (name, type, price)
+    VALUES
+      (${product.name}, ${product.type}, ${product.price})
   `;
   }
 }
